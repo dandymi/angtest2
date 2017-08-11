@@ -1,0 +1,21 @@
+<ngb-alert type="info">
+    Random Message
+</ngb-alert>
+
+{{today | date: "dd/MMM/yyyy hh:mm"}}
+
+<h1>
+    {{title}}
+</h1>
+
+<a [routerLink]="['/stocks']">STOCKS</a>
+
+<router-outlet></router-outlet>
+
+<div *ngIf="profile else noProfileFound">
+    Name: {{profile.name}}
+</div>
+
+<ng-template #noProfileFound>
+    No Profile found with ng-template
+</ng-template>
