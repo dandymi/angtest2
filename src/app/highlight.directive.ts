@@ -1,11 +1,11 @@
-import { Directive, Input, Renderer, ElementRef } from '@angular/core';
+import { Directive, Input, Renderer2, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[appMyHighlight]'
 })
 export class HighlightDirective {
 
-  constructor(el: ElementRef, renderer: Renderer) {
-    renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'blue');
+  constructor(el: ElementRef, renderer: Renderer2) {
+    renderer.setStyle(el.nativeElement, 'backgroundColor', 'blue');
   }
 }
